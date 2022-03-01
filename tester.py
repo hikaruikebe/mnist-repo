@@ -9,7 +9,7 @@ import os
 from bnn import *
 from cnn import *
 
-path_model = "our_model.tar"
+path_model = "cnn_model.tar"
 model = CNN_Network()
 model.load_state_dict(torch.load(path_model))
 model.eval()

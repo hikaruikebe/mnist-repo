@@ -11,10 +11,10 @@ class BNN_Network(nn.Module):
         # self.conv2 = nn.Conv2d(in_channels=6, out_channels=12, kernel_size=3)
         # self.conv3 = nn.Conv2d(in_channels=12, out_channels=24, kernel_size=3)
 
-        self.fc1 = BinarizedLinear(in_features=1 * 28 * 28, out_features=2048)
-        self.fc2 = BinarizedLinear(in_features=2048, out_features=2048)
-        self.fc3 = BinarizedLinear(in_features=2048, out_features=2048)
-        self.fc4 = BinarizedLinear(in_features=2048, out_features=10)
+        self.fc1 = BinarizeLinear(in_features=1 * 28 * 28, out_features=2048)
+        self.fc2 = BinarizeLinear(in_features=2048, out_features=2048)
+        self.fc3 = BinarizeLinear(in_features=2048, out_features=2048)
+        self.fc4 = BinarizeLinear(in_features=2048, out_features=10)
 
         self.bn1 = nn.BatchNorm1d(2048)
         self.bn2 = nn.BatchNorm1d(2048)
