@@ -17,6 +17,7 @@ model.eval()
 directory = "./images"
 
 sum = 0
+total = 0
 for file in os.listdir(directory):
     filename = os.fsdecode(file)
     if filename.endswith(".jpg"):
@@ -42,6 +43,7 @@ for file in os.listdir(directory):
         pred = model(img)
         _, predicted = torch.max(pred.data, 1)
         outcome = "Not correct"
+        total += 1
         if predicted == label:
             sum += 1
             outcome = "Correct"
@@ -58,4 +60,4 @@ for file in os.listdir(directory):
     else:
         continue
 
-print("Correct predictions: ", sum, "/10")
+print("Correct predictions: ", sum, "/", total)
