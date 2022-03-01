@@ -20,3 +20,15 @@ To test your own digits:
 3. Upload to images/ file
 4. Run tester.py
     a. tester.py will use latest trained parameters for cnn.py
+
+References:
+Binary Neural Network (BNN):
+https://github.com/itayhubara/BinaryNet.pytorch
+https://arxiv.org/pdf/1602.02830.pdf
+
+MNIST:
+http://yann.lecun.com/exdb/mnist/
+
+Other CNN materials:
+https://colab.research.google.com/github/chokkan/deeplearningclass/blob/master/mnist.ipynb?authuser=2#scrollTo=z7HHJrQXibt0
+https://deeplizard.com/learn/playlist/PLZbbT5o_s2xrfNyHZsM6ufI0iZENK9xgG
